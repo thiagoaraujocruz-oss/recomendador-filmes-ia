@@ -31,3 +31,78 @@ A técnica escolhida foi um Sistema de Recomendação baseado em similaridade (C
 	•	É simples, eficiente e atende ao objetivo principal do projeto: fornecer recomendações rápidas e diretas.
 
 Além disso, sistemas de recomendação são uma aplicação clássica de IA/ML, presentes em plataformas como Netflix, Spotify e Amazon, mostrando sua relevância e utilidade prática.
+
+
+Etapa 4 — Dados, Desenvolvimento e Treino/Teste
+1) Dados Utilizados
+
+Para este projeto foi utilizada uma base de filmes contendo título, descrição e gêneros.
+As descrições textuais são essenciais para que o modelo calcule a similaridade entre os filmes.
+
+Exemplo de estrutura do arquivo filmes.csv:
+| Coluna      | Tipo   | Descrição                    |   |
+| ----------- | ------ | ---------------------------- | - |
+| movie_id    | int    | Identificador único do filme |   |
+| title       | string | Título do filme              |   |
+| description | string | Sinopse/descrição do filme   |   |
+| genres      | string | Gêneros separados por `      | ` |
+
+2) Pré-processamento
+
+As etapas de preparação dos dados incluíram:
+
+Remoção de nulos nas descrições
+
+Limpeza básica do texto
+
+Extração de features com TF-IDF
+
+Separação em treino e teste com divisão 80/20:
+
+train_test_split(..., test_size=0.2, random_state=42)
+
+3) Modelo de IA Implementado
+
+Foi utilizado um sistema de recomendação baseado em conteúdo (Content-Based Filtering):
+
+Cada filme tem sua descrição convertida em um vetor TF-IDF
+
+As similaridades são calculadas usando cosseno
+
+O sistema recomenda os filmes mais próximos ao escolhido pelo usuário
+
+Esse tipo de modelo é adequado por ser simples, eficiente e não depender de avaliações de usuários.
+
+4) Treino e Teste
+
+O processo de treino consistiu em:
+
+Ajustar o TF-IDF a partir dos dados de treino
+
+Gerar os vetores dos filmes
+
+Calcular a matriz de similaridade
+
+Para medir desempenho, foi usada a métrica Precision@K, que verifica se o modelo é capaz de sugerir corretamente filmes semelhantes dentro do top-K retornado.
+
+Os arquivos gerados foram salvos na pasta models/.
+
+5) Reprodutibilidade
+
+O projeto inclui:
+
+requirements.txt com todas as dependências
+
+Scripts organizados em src/
+
+Artefatos salvos na pasta models/
+
+Código estruturado para sempre usar random_state=42, garantindo resultados reproduzíveis
+
+Com isso, qualquer pessoa pode baixar o repositório e rodar:
+pip install -r requirements.txt
+python src/preprocess.py
+python src/recomendador.py
+
+
+
