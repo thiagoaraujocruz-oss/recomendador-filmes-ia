@@ -98,11 +98,106 @@ Scripts organizados em src/
 Artefatos salvos na pasta models/
 
 Código estruturado para sempre usar random_state=42, garantindo resultados reproduzíveis
-
 Com isso, qualquer pessoa pode baixar o repositório e rodar:
 pip install -r requirements.txt
 python src/preprocess.py
 python src/recomendador.py
 
+---
+
+## 🎯 Versão Resumida / README Formatado 
+🎬 Recomendador de Filmes por Similaridade
+👥 Equipe
+
+Nome Sobrenome — RA: 0000000
+Nome Sobrenome — RA: 0000000
+Turma: X | Curso: Y | Período: Noturno | Ano: 2025
+
+🧩 Problema
+
+Com a enorme quantidade de filmes disponíveis em plataformas digitais, os usuários têm dificuldade em encontrar opções que realmente combinem com seus gostos. Esse projeto resolve esse problema oferecendo um sistema recomendador baseado em similaridade, capaz de sugerir filmes parecidos com base na descrição de um título escolhido.
+
+🤖 Abordagem de IA
+
+O sistema utiliza Content-Based Filtering, transformando descrições de filmes em vetores numéricos com TF-IDF e calculando a similaridade usando cosseno.
+
+Essa técnica é adequada pois:
+
+Funciona mesmo com poucos dados
+
+Não depende de avaliações
+
+Retorna recomendações relevantes rapidamente
+
+Métrica principal: Precision@K
+
+📊 Dados
+Coluna	Tipo	Descrição
+movie_id	int	ID único do filme
+title	string	Título
+description	string	Sinopse
+genres	string	Gêneros separados por “,”
+Pré-processamento
+
+Remoção de nulos
+
+Limpeza de texto
+
+TF-IDF
+
+Treino/teste 80/20 (random_state=42)
+
+🛠️ Como reproduzir
+1. Clonar o repositório
+git clone https://github.com/usuario/nome-do-projeto.git
+cd nome-do-projeto
+
+2. Criar ambiente virtual
+
+Windows
+
+python -m venv .venv
+.venv\Scripts\activate
+
+
+Linux/macOS
+
+python3 -m venv .venv
+source .venv/bin/activate
+
+3. Instalar dependências
+pip install -r requirements.txt
+
+4. Pré-processar os dados
+python src/preprocess.py
+
+5. Rodar o recomendador
+python src/recomendador.py
+
+6. Executar o programa principal
+python src/main.py --seed 42
+
+📈 Resultados
+
+Métrica usada: Precision@K
+(Substitua pelos resultados reais depois.)
+
+📁 Estrutura do Projeto
+├── data/
+│   ├── filmes.csv
+│   └── processed/
+├── models/
+│   ├── tfidf_vectorizer.pkl
+│   └── similarity_matrix.npy
+├── src/
+│   ├── preprocess.py
+│   ├── recomendador.py
+│   └── main.py
+├── reports/
+│   └── figures/
+├── notebooks/
+│   └── exploracao.ipynb
+├── requirements.txt
+└── README.md
 
 
