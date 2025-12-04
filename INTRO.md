@@ -1,0 +1,8 @@
+Recomendador de Filmes por Similaridade
+
+Projeto Integrador 2025 – UNINOVE
+
+⸻
+
+➤ NOME: THIAGO DE ARAUJO CRUZ — RA: 2224105685
+➤ NOME: VICTOR RODRIGUES ROCHA DA CRUZ — RA: 2224104116
