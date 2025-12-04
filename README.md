@@ -1,3 +1,6 @@
+
+
+
 Recomendador de Filmes por Similaridade
 
 Este projeto é uma IA simples que recomenda filmes semelhantes com base na descrição de cada um, utilizando TF-IDF e similaridade do cosseno.
@@ -105,19 +108,19 @@ python src/recomendador.py
 
 ---
 
-## 🎯 Versão Resumida / README Formatado 
-🎬 Recomendador de Filmes por Similaridade
-👥 Equipe
+ Versão Resumida / README Formatado 
+Recomendador de Filmes por Similaridade
+Equipe
 
 Nome Sobrenome — RA: 0000000
 Nome Sobrenome — RA: 0000000
 Turma: X | Curso: Y | Período: Noturno | Ano: 2025
 
-🧩 Problema
+Problema
 
 Com a enorme quantidade de filmes disponíveis em plataformas digitais, os usuários têm dificuldade em encontrar opções que realmente combinem com seus gostos. Esse projeto resolve esse problema oferecendo um sistema recomendador baseado em similaridade, capaz de sugerir filmes parecidos com base na descrição de um título escolhido.
 
-🤖 Abordagem de IA
+Abordagem de IA
 
 O sistema utiliza Content-Based Filtering, transformando descrições de filmes em vetores numéricos com TF-IDF e calculando a similaridade usando cosseno.
 
@@ -131,7 +134,7 @@ Retorna recomendações relevantes rapidamente
 
 Métrica principal: Precision@K
 
-📊 Dados
+Dados
 Coluna	Tipo	Descrição
 movie_id	int	ID único do filme
 title	string	Título
@@ -147,7 +150,7 @@ TF-IDF
 
 Treino/teste 80/20 (random_state=42)
 
-🛠️ Como reproduzir
+Como reproduzir
 1. Clonar o repositório
 git clone https://github.com/usuario/nome-do-projeto.git
 cd nome-do-projeto
@@ -177,12 +180,12 @@ python src/recomendador.py
 6. Executar o programa principal
 python src/main.py --seed 42
 
-📈 Resultados
+Resultados
 
 Métrica usada: Precision@K
 (Substitua pelos resultados reais depois.)
 
-📁 Estrutura do Projeto
+Estrutura do Projeto
 ├── data/
 │   ├── filmes.csv
 │   └── processed/
